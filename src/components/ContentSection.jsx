@@ -1,14 +1,14 @@
 import React from 'react'
 import { HiMiniHome } from "react-icons/hi2";
-import { MapPin, ArrowRight, ShieldCheck, Award, HeartHandshake, Sparkles } from 'lucide-react'
+import { Phone } from 'lucide-react'
 
-const ContentSection = () => {
+const ContentSection = ({ onOpenContact }) => {
   return (
-    <section className="bg-textured py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-b border-gray-200">
+    <section id="contact" className="bg-textured py-10 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-b border-gray-200">
       <div className="max-w-4xl mx-auto text-center">
         
         {/* Main Title - Exact Font, Spacing, and Colors */}
-        <h1 className="font-serif text-2xl sm:text-2xl md:text-3xl lg:text-[34px]  text-neutral-700 tracking-normal  uppercase leading-snug sm:leading-tight mb-4 sm:mb-6">
+        <h1 className="font-serif text-2xl sm:text-2xl md:text-3xl lg:text-[34px] text-neutral-700 tracking-normal uppercase leading-snug sm:leading-tight mb-4 sm:mb-6">
           WE ARE CITRUS HOMES / MEADOWOOD HOMES OF FLORIDA!
         </h1>
 
@@ -28,9 +28,12 @@ const ContentSection = () => {
         </div>
 
         {/* Description Paragraph */}
-        <p className="text-neutral-600 text-base sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12 font-normal">
+        <p className="text-neutral-600 text-base sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-normal">
           We offer a wide variety of services and can assist you with just about any aspect related to Manufactured Homes or Modular Homes.
         </p>
+
+        
+
       </div>
     </section>
   )

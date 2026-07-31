@@ -14,27 +14,27 @@ const YoutubeIcon = ({ className }) => (
   </svg>
 )
 
-const TopBar = ({ onOpenSearch }) => {
+const TopBar = ({ onOpenSearch, onOpenContact }) => {
   return (
     <div className="bg-[#990000] hidden md:block text-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider py-1.5 px-4 sm:px-8 border-b border-[#770000]">
       <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
 
         {/* Phone & Contact Info */}
         <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
-          <a
-            href="tel:8556952246"
-            className="flex items-center gap-1.5 hover:text-gray-200 transition-colors"
+          <button
+            onClick={() => onOpenContact && onOpenContact()}
+            className="flex items-center gap-1.5 hover:text-gray-200 transition-colors cursor-pointer"
           >
             <Phone className="w-3.5 h-3.5 fill-current" />
             <span>DIAL (971) MY E EDINGER HOMES (971) 487 0100</span>
-          </a>
+          </button>
           <span className="hidden sm:inline opacity-40">|</span>
-          <a
-            href="#contact"
-            className="hover:underline hover:text-gray-200 transition-colors"
+          <button
+            onClick={() => onOpenContact && onOpenContact()}
+            className="hover:underline hover:text-gray-200 transition-colors cursor-pointer"
           >
             CONTACT US
-          </a>
+          </button>
         </div>
 
         {/* Social Icons & Search (Desktop view right side) */}

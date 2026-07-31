@@ -82,7 +82,7 @@ const navData = [
   },
 ]
 
-const Navbar = ({ onOpenSearch }) => {
+const Navbar = ({ onOpenSearch, onOpenContact }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('HOME')
   const [expandedItems, setExpandedItems] = useState({})
@@ -114,7 +114,14 @@ const Navbar = ({ onOpenSearch }) => {
               <a
                 key={item.id}
                 href={item.href}
-                onClick={() => setActiveTab(item.name)}
+                onClick={(e) => {
+                  if (item.id === 'contact') {
+                    e.preventDefault()
+                    if (onOpenContact) onOpenContact()
+                  } else {
+                    setActiveTab(item.name)
+                  }
+                }}
                 className={`flex items-center justify-center flex-1 px-3 xl:px-5 text-[12px] xl:text-[13px] font-bold tracking-wide transition-colors border-r border-gray-300/80 last:border-r-0 text-center hover:bg-white/40 ${
                   isActive 
                     ? 'text-[#990000] bg-white/30' 
@@ -196,8 +203,12 @@ const Navbar = ({ onOpenSearch }) => {
                     <div className="flex items-center justify-between">
                       <a
                         href={item.href}
-                        onClick={() => {
-                          if (hasSub) {
+                        onClick={(e) => {
+                          if (item.id === 'contact') {
+                            e.preventDefault()
+                            setMobileMenuOpen(false)
+                            if (onOpenContact) onOpenContact()
+                          } else if (hasSub) {
                             toggleExpand(item.id)
                           } else {
                             setActiveTab(item.name)
