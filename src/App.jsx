@@ -4,11 +4,9 @@ import Navbar from './components/Navbar'
 import Carousel from './components/Carousel'
 import AccessibilityWidget from './components/AccessibilityWidget'
 import ContentSection from './components/ContentSection'
-import SearchModal from './components/SearchModal'
 import ContactModal from './components/ContactModal'
 
 const App = () => {
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isContactOpen, setIsContactOpen] = useState(false)
 
   return (
@@ -16,13 +14,11 @@ const App = () => {
       
       {/* Top Contact Bar */}
       <TopBar 
-        onOpenSearch={() => setIsSearchOpen(true)}
         onOpenContact={() => setIsContactOpen(true)}
       />
 
       {/* Main Navigation Bar */}
       <Navbar 
-        onOpenSearch={() => setIsSearchOpen(true)}
         onOpenContact={() => setIsContactOpen(true)}
       />
 
@@ -37,12 +33,6 @@ const App = () => {
 
       {/* Accessibility Widget Badge */}
       <AccessibilityWidget />
-
-      {/* Search Modal */}
-      <SearchModal 
-        isOpen={isSearchOpen} 
-        onClose={() => setIsSearchOpen(false)} 
-      />
 
       {/* Contact Details Modal */}
       <ContactModal 

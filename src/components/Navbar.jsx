@@ -82,7 +82,7 @@ const navData = [
   },
 ]
 
-const Navbar = ({ onOpenSearch, onOpenContact }) => {
+const Navbar = ({ onOpenContact }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('HOME')
   const [expandedItems, setExpandedItems] = useState({})
@@ -139,15 +139,14 @@ const Navbar = ({ onOpenSearch, onOpenContact }) => {
         {/* Mobile Right Controls: Search button & Hamburger Menu */}
         <div className="flex lg:hidden items-center justify-end flex-1 px-4 gap-3 sm:gap-4">
           
-          {/* Mobile Search Button */}
-          <button 
-            onClick={() => onOpenSearch && onOpenSearch()}
-            className="flex items-center gap-1.5 text-[#333333] hover:text-[#990000] transition-colors py-2 px-1 text-xs font-bold uppercase tracking-wider cursor-pointer"
-            aria-label="Open Search"
+          {/* Mobile Search Label */}
+          <div 
+            className="flex items-center gap-1.5 text-[#333333] py-2 px-1 text-xs font-bold uppercase tracking-wider select-none cursor-default"
+            aria-label="Search"
           >
             <Search className="w-4 h-4 stroke-[2.5]" />
             <span className="font-bold text-[13px]">SEARCH ...</span>
-          </button>
+          </div>
 
           {/* Mobile Hamburger Button */}
           <button
@@ -272,7 +271,6 @@ const Navbar = ({ onOpenSearch, onOpenContact }) => {
                 <button 
                   onClick={() => {
                     setMobileMenuOpen(false);
-                    if (onOpenSearch) onOpenSearch();
                   }}
                   className="flex items-center gap-2 text-gray-800 font-bold text-sm hover:text-[#990000] transition-colors"
                 >

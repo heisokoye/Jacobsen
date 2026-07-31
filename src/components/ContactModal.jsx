@@ -60,7 +60,7 @@ const ContactModal = ({ isOpen, onClose }) => {
             <div className="text-xl sm:text-2xl font-semibold text-neutral-800 tracking-tight leading-tight">
               DIAL (971) MY E EDINGER HOMES
             </div>
-            <div className="text-2xl sm:text-3xl font-bold text-[#990000] tracking-wide">
+            <div className="text-2xl sm:text-3xl font-semibold text-[#990000] tracking-wide">
               (971) 487 0100
             </div>
           </div>
