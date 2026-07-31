@@ -26,7 +26,7 @@ const TopBar = ({ onOpenSearch }) => {
             className="flex items-center gap-1.5 hover:text-gray-200 transition-colors"
           >
             <Phone className="w-3.5 h-3.5 fill-current" />
-            <span>DIAL (855) MYJACHOME! (855) 695 2246</span>
+            <span>DIAL (971) MY E EDINGER HOMES (971) 487 0100</span>
           </a>
           <span className="hidden sm:inline opacity-40">|</span>
           <a

@@ -21,8 +21,8 @@ const ContentSection = () => {
         <div className="relative flex items-center justify-center my-8 sm:my-10 max-w-xl mx-auto">
           <div className="w-full border-t border-gray-300"></div>
           <div className="absolute bg-[#f8f8f7] px-4">
-            <div className="p-1 rounded-sm text-[#444444]">
-              <HiMiniHome className="w-10 h-9 text-[#444444]" />
+            <div className="rounded-lg text-[#444444]">
+              <HiMiniHome className="w-11 h-9 text-[#444444]" />
             </div>
           </div>
         </div>
